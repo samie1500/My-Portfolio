@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="box">
+        <form>
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <input type="text" name="loginuser" id="email" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="password" required="required">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#">Signup</a>
+            </div>
+            <input type="submit" value="Login" onclick="auth()"/>
+        </form>
+    </div>
+    <script>
+        function auth(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if(email == "avdhutdevkate43@gmail.com" && password == "Pass@123"){
+            window.location.assign("index1.html");
+            alert("Login Successfully Done");
+        }
+        else
+        {
+            alert('Invalid Username or Password');
+            return;
+        }
+        }
+    
+    </script>
+</body>
+</html>
